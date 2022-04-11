@@ -14,7 +14,7 @@ export default function History() {
       description: 'This column has a value getter and is not sortable.',
       sortable: false,
       renderCell: (params) => {
-        return <Link to="/">View</Link>
+        return <Link to="/user-details" state={{data : params.row, from: 'history'}}  >View</Link>
       }
     },
     {
@@ -48,6 +48,7 @@ export default function History() {
   ];
   useEffect(() => {
     getAll().then((res) => {
+      console.log(res)
       setList(res)
     })
   }, [])

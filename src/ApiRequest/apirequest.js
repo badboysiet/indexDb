@@ -14,3 +14,16 @@ export function sampleApiRequest() {
   })
 
 }
+export function sampleApiUserDetailsRequest(id) {
+  return new Promise((res, rej) => {
+    axios
+      .get(`/posts/${id}`)
+      .then((response) => {
+        return res(response);
+      })
+      .catch((err) => {
+        return rej(err);
+      })
+  })
+
+}

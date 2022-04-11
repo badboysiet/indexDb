@@ -40,7 +40,7 @@ export default function UserList() {
       field: 'details',
       headerName: 'Details',
       renderCell: (params) => {
-        return <Link to="/user-details" state={{data : params.row}}  className="link">Views</Link>;
+        return <Link to="/user-details" state={{data : params.row, from: 'list'}}  className="link">Views</Link>;
       }
     }
     ];
